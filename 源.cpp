@@ -4,12 +4,12 @@
 #include<Windows.h>
 int main(int agrc, char* agrv[])
 {
-	char a[100] = { '\0' };
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷"));
-	printf("ÇëÔÚ´Ë´¦ÊäÈëÄúÏëÒª¼ÓËÙÔËĞĞpythonÎÄ¼şµÄÎÄ¼şÂ·¾¶,Èç.......1.py\n");
+	char a[255] = { '\0' };
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨"));
+	printf("è¯·åœ¨æ­¤å¤„è¾“å…¥æ‚¨æƒ³è¦åŠ é€Ÿè¿è¡Œpythonæ–‡ä»¶çš„æ–‡ä»¶è·¯å¾„,å¦‚.......1.py\n");
 	int m = 0, n = 0;
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÇëÊäÈëÏëÒª¼ÓËÙÔËĞĞµÄÎÄ¼şÂ·¾¶"));
-	while (m == 0 && n < 100)
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------è¯·è¾“å…¥æƒ³è¦åŠ é€Ÿè¿è¡Œçš„æ–‡ä»¶è·¯å¾„"));
+	while (m == 0 && n < 255)
 	{
 		scanf_s("%c", &a[n]);
 		if (a[n] == '\n')
@@ -18,7 +18,7 @@ int main(int agrc, char* agrv[])
 		}
 		n++;
 	}
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÕıÔÚ×¼±¸¼ÓËÙ£¬ÇëÉÔºó"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------æ­£åœ¨å‡†å¤‡åŠ é€Ÿï¼Œè¯·ç¨å"));
 	FILE* f1 = fopen("1.cmd", "a");
 	m = 0;
 	fprintf(f1, "echo off\n");
@@ -29,17 +29,17 @@ int main(int agrc, char* agrv[])
 		m++;
 	}
 	fflush(f1);
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------python¼ÓËÙÄ£¿éÆô¶¯Íê³É£¬×¼±¸Ö´ĞĞÖ¸Áî"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------pythonåŠ é€Ÿæ¨¡å—å¯åŠ¨å®Œæˆï¼Œå‡†å¤‡æ‰§è¡ŒæŒ‡ä»¤"));
 	Sleep(1000);
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÕıÔÚÖ´ĞĞÖ¸Áî,ÇëÎğÊ¹ÓÃCrtl+C or break,·ñÔò»áÊ¹³ÌĞòÒì³£"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------æ­£åœ¨æ‰§è¡ŒæŒ‡ä»¤,è¯·å‹¿ä½¿ç”¨Crtl+C or break,å¦åˆ™ä¼šä½¿ç¨‹åºå¼‚å¸¸"));
 	system("1.cmd");
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÕıÔÚÖ´ĞĞÖ¸Áî"));
-	printf("³ÌĞòÔËĞĞÍê³É\n");
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÕıÔÚÉ¾³ıÁÙÊ±ÎÄ¼ş"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------æ­£åœ¨æ‰§è¡ŒæŒ‡ä»¤"));
+	printf("ç¨‹åºè¿è¡Œå®Œæˆ\n");
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------æ­£åœ¨åˆ é™¤ä¸´æ—¶æ–‡ä»¶"));
 	FILE* f2 = fopen("1.cmd", "w");
 	fprintf(f2, "");
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------ÕıÔÚÉ¾³ıÁÙÊ±ÎÄ¼ş"));
-	SetConsoleTitle(TEXT("pythonÔËĞĞ¼ÓËÙÆ÷ ------³ÌĞòÖ´ĞĞÍê³É"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------æ­£åœ¨åˆ é™¤ä¸´æ—¶æ–‡ä»¶"));
+	SetConsoleTitle(TEXT("pythonè¿è¡ŒåŠ é€Ÿå™¨ ------ç¨‹åºæ‰§è¡Œå®Œæˆ"));
 	system("pause");
 	return 0;
 }
